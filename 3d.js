@@ -13,14 +13,14 @@ var renderer, labelRenderer;
 var container = document.getElementById('container');
 renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, myHeight );
-//container.appendChild( renderer.domElement );
+container.appendChild( renderer.domElement );
 
 // LABEL RENDERER //
 labelRenderer = new THREE.CSS2DRenderer();
 labelRenderer.setSize( window.innerWidth, myHeight );
 labelRenderer.domElement.style.position = 'absolute';
 labelRenderer.domElement.style.top = 0;
-//container.appendChild( labelRenderer.domElement );
+container.appendChild( labelRenderer.domElement );
 
 // CAMERA //
 var camera = new THREE.PerspectiveCamera( 25, window.innerWidth / myHeight, 5, 3500 );
@@ -41,8 +41,6 @@ myDiv.className = 'label';
 myDiv.textContent = 'You!';
 var myLabel = new THREE.CSS2DObject( myDiv );
 mesh.add( myLabel );
-
-
 
 function map_range(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
@@ -70,23 +68,13 @@ function updateV() {
         if (i == 0) {
             myLabel.position.set( x2, y2, z2 );
         }
-
-
-
     }
-    
     geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ));
-
-    
 }
 
 updateV();
 
-
-
-
 root.add( mesh );
-
 
 scene.fog = new THREE.Fog( 0, 2000, 2200 );
 

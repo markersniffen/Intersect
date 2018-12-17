@@ -22,26 +22,59 @@ TEST!!!
 		<div class="canvas" id="container"></div>
 
 		<div id="bottom">
-			<div id="myDIV" class="header">
-				<h2>Intersections:</h2>
-				<input type="text" id="myInput" placeholder="Title...">
-				<span onclick="newElement()" class="addBtn">Add</span>
+
+			<div>
+				<button class='button' onclick="add()" id="add">ADD INTERSECTION</button>
+				<table id="list">
+					<tr class="header">
+						<th style="width:25%">Intersect</th>
+						<th style="width:25%">Value</th>
+						<th style="width:4%"></th>
+						<th style="width:5%">Num</th>
+						<th style="width:4%"></th>
+						<th style="width:4%"></th>
+					</tr>
+					<tr>
+							<td> <input> </td>
+							<td> <input></td>
+							<td>
+								<button class="button"><</button>
+							</td>
+							<td>
+								200
+							</td>
+							<td>
+								<button class="button">></button>
+							</td>
+							<td>
+								<button class="button">x</button>
+							</td>
+					</tr>
+					<tr>
+							<td> <input> </td>
+							<td> <input> </td>
+							<td>
+								<button class="button"><</button>
+							</td>
+							<td>
+								200
+							</td>
+							<td>
+								<button class="button">></button>
+							</td>
+							<td>
+								<button class="button">x</button>
+							</td>
+					</tr>
+				</table>
 			</div>
-			<ul id="myUL">
-				<li>Hit the gym</li>
-				<li class="checked">Pay bills</li>
-				<li>Meet George</li>
-				<li>Buy eggs</li>
-				<li>Read a book</li>
-				<li>Organize office</li>
-			</ul>
 		</div>  
 	
 	
 	
 	
 	
-		<script src="test.js"></script>
+		<script src="3d.js"></script>
 		<script src="list.js"></script>
         
 
