@@ -5,20 +5,44 @@ TEST!!!
 		<title>My particle test</title>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="library/three.js"></script>
+		<script type="text/javascript" src="library/CSS2DRenderer.js"></script>
 	</head>
 	<body>
-        <input type="range" min="1" max="1000000" value="50" class="slider" id="myRange" onclick="updateV()">
-        <button type="button" id="update", onclick="updateV()">Update Vertices!</button>
-        <div id="text">Test Text</div>
+		<div>
+			<input type="range" min="1" max="1000000" value="50" class="slider" id="myRange" onclick="updateV()">
+			<button type="button" id="update", onclick="updateV()">Update Vertices!</button>
+			<div id="text">
+				Test Text
+			</div>
+		</div>
+		
 
+		<div class="canvas" id="container"></div>
 
-        <div id="container"></div>
-        
-		<script src="library/three.js"></script>
-		<script src="js/WebGL.js"></script>
-		<script src="js/libs/stats.min.js"></script>
-        <script src="test.js"></script>
+		<div id="bottom">
+			<div id="myDIV" class="header">
+				<h2>Intersections:</h2>
+				<input type="text" id="myInput" placeholder="Title...">
+				<span onclick="newElement()" class="addBtn">Add</span>
+			</div>
+			<ul id="myUL">
+				<li>Hit the gym</li>
+				<li class="checked">Pay bills</li>
+				<li>Meet George</li>
+				<li>Buy eggs</li>
+				<li>Read a book</li>
+				<li>Organize office</li>
+			</ul>
+		</div>  
+	
+	
+	
+	
+	
+		<script src="test.js"></script>
+		<script src="list.js"></script>
         
 
 	</body>
